@@ -1,0 +1,1179 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+
+
+/*
+Author: Branden Dane
+Company: Bay Street Software
+Project: Gazprom Training Website
+*/
+
+
+
+/*======================================================================================================
+			REFERENCES:
+			
+			
+=======================================================================================================*/
+
+
+
+
+
+/*======================================================================================================
+			TABLE OF CONTENTS:
+			1.Superfish Menu
+			2.Formalize
+			3.Branding
+			4.Forms
+			5.Menu
+			6.Text
+			7.Visuals
+			8.Contact Information Bar
+			9.Footer
+			10.Nivo Slider
+			11.Social Media Bar
+			12.Customs
+=======================================================================================================*/
+
+
+
+
+
+
+/*======================================================================================================
+			1.Superfish Menu
+======================================================================================================*/
+
+#block-superfish-1
+{
+	display: inline-block;
+	position:relative;
+	margin-top: 1em; 
+	width:100%;
+}
+
+.sf-navbar {
+  position: relative;
+}
+.sf-navbar li {
+  position: static;
+  padding-right: 25px;
+  padding-left:30px;
+}
+.sf-navbar li li {
+  position: relative;
+}
+.sf-navbar li ul,
+.sf-navbar li li li {
+  width: 100%;
+}
+.sf-navbar li li {
+  width: auto;
+  float: left;
+}
+.sf-navbar li li:hover > ul,
+.sf-navbar li li.sfHover > ul,
+.sf-navbar > li.active-trail > ul {
+  left: 0;
+  top: 2.5em;
+}
+.sf-navbar li li li:hover > ul,
+.sf-navbar li li li.sfHover > ul {
+  left: 12em;
+  top: 0;
+}
+.sf-navbar ul .sf-sub-indicator {
+  background-position: -10px -100px;
+}
+.sf-navbar ul a > .sf-sub-indicator {
+  background-position: 0 -100px;
+}
+.sf-navbar ul a:focus > .sf-sub-indicator,
+.sf-navbar ul a:hover > .sf-sub-indicator,
+.sf-navbar ul a:active > .sf-sub-indicator,
+.sf-navbar ul li:hover > a > .sf-sub-indicator,
+.sf-navbar ul li.sfHover > a > .sf-sub-indicator {
+  background-position: -10px -100px;
+}
+.sf-navbar ul ul .sf-sub-indicator {
+  background-position: -10px 0;
+}
+.sf-navbar ul ul a > .sf-sub-indicator {
+  background-position: 0 0;
+}
+.sf-navbar ul ul a:focus > .sf-sub-indicator,
+.sf-navbar ul ul a:hover > .sf-sub-indicator,
+.sf-navbar ul ul a:active > .sf-sub-indicator,
+.sf-navbar ul ul li:hover > a > .sf-sub-indicator,
+.sf-navbar ul ul li.sfHover > a > .sf-sub-indicator {
+  background-position: -10px 0;
+}
+.sf-navbar > li > ul {
+  background: transparent;
+  padding: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+}
+
+
+
+
+/*=============================================================================================================================================
+			2.Formalize
+==============================================================================================================================================*/
+
+/* UI Consistency */
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  vertical-align: middle;
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  border-radius: 11px;
+  background: #ddd url(../images/button.png) repeat-x;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+  background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+  border: 1px solid;
+  border-color: #ddd #bbb #999;
+  cursor: pointer;
+  color: #333;
+  font: bold 12px/1.2 Arial, sans-serif;
+  outline: 0;
+  overflow: visible;
+  padding: 3px 10px 4px;
+  text-shadow: #fff 0 1px 1px;
+  width: auto;
+  *padding-top: 2px; /* IE7 */
+  *padding-bottom: 0px; /* IE7 */
+}
+
+button {
+  *padding-top: 1px; /* IE7 */
+  *padding-bottom: 1px; /* IE7 */
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: #000;
+  outline: 0;
+  padding: 2px 3px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  height: 1.8em;
+  *padding-top: 2px; /* IE7 */
+  *padding-bottom: 1px; /* IE7 */
+  *height: auto; /* IE7 */
+}
+
+/* Separate rule for Firefox. Cannot stack with WebKit's. */
+input.placeholder_text,
+textarea.placeholder_text,
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active {
+  -moz-box-shadow: #06f 0 0 7px;
+  -webkit-box-shadow: #06f 0 0 7px;
+  box-shadow: #06f 0 0 7px;
+  z-index: 1; /* For Opera */
+}
+
+input[type="file"]:focus,
+input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+select[disabled],
+textarea[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eee;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: #888;
+  cursor: default;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+/* Tweaks for Safari + Chrome. */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    background-image: url(../images/select-arrow.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+
+  select[size],
+  select[multiple] {
+    background-image: none;
+    padding: 0;
+  }
+}
+
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+optgroup {
+  color: #000;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* IE6 */
+.ie6-button,
+* html button {
+  background: #ddd url(../images/button.png) repeat-x;
+  border: 1px solid;
+  border-color: #ddd #bbb #999;
+  cursor: pointer;
+  color: #333;
+  font: bold 12px/1.2 Arial, sans-serif;
+  padding: 2px 10px 0px;
+  overflow: visible;
+  width: auto;
+}
+
+* html button {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.ie6-input,
+* html textarea,
+* html select {
+  background: #fff;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: #000;
+  padding: 2px 3px 1px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  vertical-align: top;
+}
+
+* html select {
+  margin-top: 1px;
+}
+
+.placeholder_text,
+.ie6-input-disabled,
+.ie6-button-disabled {
+  color: #888;
+}
+
+.ie6-input-disabled {
+  background: #eee;
+}
+
+
+
+
+/*=====================================================================================================================================================
+			3.Branding
+======================================================================================================================================================*/
+.logo-img {
+
+}
+
+.site-name-slogan {
+  float: left;
+}
+
+.site-name {
+  margin-top: 20px;
+}
+
+.site-name a {
+  text-decoration: none;
+}
+
+.site-name,
+.site-slogan {
+  margin-bottom: 0;
+  line-height: 1em;
+}
+
+.site-slogan {
+  font-weight: normal;
+}
+
+
+
+
+
+/*====================================================================================================================================================
+			4.Forms
+=====================================================================================================================================================*/
+.form-actions input {
+  margin-right: 0.5em;
+}
+
+.form-actions input:hover {
+  background: #FFFFFF;
+}
+
+label {
+  font-weight: bold;
+}
+
+
+
+
+
+/*========================================================================================================================================================
+			5.Menu
+=========================================================================================================================================================*/
+.menu {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;  
+}
+
+
+/*======================================================================================================================================================
+			6.Text
+=======================================================================================================================================================*/
+body {
+  font: 13px/1.5 Verdana, Helvetica, Arial, sans-serif;
+}
+
+a:link, a:visited {
+  color: #0062A0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #202124;
+  text-decoration: none;
+}
+
+a:active {
+  color: #202124;
+  text-decoration: none;
+  color: #000;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 1px;
+  background: #5294c1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.05em;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+/* Make site titles the same size if it's an H1 (home) or H2 (internal) */
+h1.site-name,
+h2.site-name {
+  font-size: 36px;
+}
+
+/* Make it a bit smaller for block headers */
+h2.block-title {
+  font-size: 18px;
+  margin: 0;	
+}
+
+h2.node-title {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 19px;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: disc;
+}
+
+ul ul,
+ol ol {
+  padding-top: 0.5em;
+}
+
+.node ol,
+.node ul {
+  padding-left: 1.2em;
+}
+
+.node ul.inline,
+.node ol.inline {
+  padding-left: 0;
+}
+
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol,
+ul, pre, table, address, fieldset {
+  margin-bottom: 20px;
+}
+
+dt, .admin h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+dd {
+  padding-left: 10px;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+
+
+/*============================================================================================================================================
+			7.Visuals
+=============================================================================================================================================*/
+/* Pagers Positioning */
+.item-list .pager {
+  padding:0;
+  margin: 0;
+}
+
+.item-list .pager li,
+.item-list .pager ul li {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.item-list .pager {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  text-align: left;
+}
+
+.pager li a {
+  display: inline-block;
+}
+
+.pager li.pager-ellipsis,
+.pager li.pager-current,
+.pager li a {
+  padding:4px 8px;
+  text-decoration: none;
+}
+
+.pager li.pager-current {
+  padding:4px 8px;
+  font-weight: bold;
+}
+
+.pager li.pager-first a,
+.pager li.pager-previous a,
+.pager li.pager-next a,
+.pager li.pager-last a {
+  width: 50px;
+  text-align:center;
+  padding: 4px 0;
+}
+
+.pager li.pager-next {
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+
+.pager li.pager-last,
+.pager li.pager-next.last {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-right: 0;
+}
+
+/* Pagers color */
+.pager li.pager-ellipsis,
+.pager li.pager-current,
+.pager li a {
+  color:#1a1a1a;
+}
+
+.pager li {
+  border-right: 1px solid;
+  border-color: #ddd #bbb #999;
+  color: #333;
+  font: bold 12px/1.2 Arial, sans-serif;
+  outline: 0;
+}
+
+.pager li.pager-current {
+  background: #ddd url(../images/button.png) repeat-x;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1a1a1a), color-stop(1, #5a5a5a));
+  background: -moz-linear-gradient(top center, #1a1a1a 0%, #5a5a5a 100%);
+  color: #FFF;
+  outline: 0;
+}
+
+.pager li.pager-next {
+  border-left: 1px solid;
+  border-color: #ddd #bbb #999;
+}
+
+.pager li a {
+  background: #ddd url(../images/button.png) repeat-x;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+  background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+  cursor: pointer;
+}
+
+.pager li a:hover {
+  background:#FFF;
+  color:#454545;
+}
+
+/* Add default border radius to list items & links */
+.pager {
+  background:#ebebeb;
+  border:1px solid;
+  border-color: #ddd #bbb #999;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.pager li.first,
+.pager li.first a,
+.pager li.first a:hover {
+  border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+}
+
+.pager li.pager-last,
+.pager li.pager-last a,
+.pager li.pager-last a:hover {
+  border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+}
+
+table {
+  border: 1px solid #CCC;
+  width: 100%;
+}
+
+thead th, th {
+  background: #f7f7f7;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+}
+
+td, th {
+  padding: 4px 8px;
+  vertical-align: middle;
+}
+
+th a, th a:link, th a:visited {
+  text-decoration: none;
+}
+
+th a {
+  display: block;
+}
+
+th a img {
+  margin: 0 0 0 5px;
+}
+
+th.active {
+  background: #DDD;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+}
+
+/* Odd & Even Styles */
+tr.even td {
+  background: #F1F5FA;
+}
+
+tr.odd td {
+  background: #fff;
+}
+
+td.active {
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+}
+
+tr.even td.active {
+  background: #e5e9ed;
+}
+
+tr.odd td.active {
+  background: #f2f2f2;
+}
+
+tr:hover td,
+tr.even:hover td.active,
+tr.odd:hover td.active {
+  background: #FFFEEE;
+}
+
+td ul.links {
+  margin-bottom: 0;
+}
+
+.node-links ul li a,
+.comment-links ul li a {
+  text-transform: lowercase;
+  display: block;
+  float: left;
+  text-decoration: none;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  margin: 0 0.5em 0.5em 0;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  border-radius: 11px;
+  background: #ddd url(../images/button.png) repeat-x;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+  background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+  border: 1px solid;
+  border-color: #ddd #bbb #999;
+  cursor: pointer;
+  color: #333;
+  font: bold 12px/1.2 Arial, sans-serif;
+  outline: 0;
+  overflow: visible;
+  padding: 4px 10px 3px;
+  text-shadow: #fff 0 1px 1px;
+  width: auto;
+
+  /* IE7 */
+  *padding-top: 2px;
+  *padding-bottom: 0px;
+}
+
+.node-links ul li a:hover,
+.comment-links ul li a:hover {
+  background: #FFF;
+}
+
+.tips,
+.description {
+  font-size: 10px;
+  color: #6a6a6a;
+}
+
+/*==============================================================================================================================================
+			8.Contact Information Bar
+==============================================================================================================================================*/
+
+#block-block-1
+{
+	border:solid 2px black;
+}
+.region-footer-first-inner
+{
+	padding-top: 250px;
+}
+/*==============================================================================================================================================
+			9.Footer
+==============================================================================================================================================*/
+
+#block-block-2
+{
+
+}
+
+/*==============================================================================================================================================
+			10.Nivo Slider
+===============================================================================================================================================*/
+
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:350px;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	height:350;
+	max-width: none;
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+	padding: 15px 0;
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+#nivoSlider
+{
+	display: inline-block;
+	position:relative;
+	
+}
+/*===============================================================================================================================================
+			11.Social Media Bar
+===============================================================================================================================================*/
+
+.social-media-bar
+{
+	position:relative;
+    
+	top: 38px;
+    
+	left: 770px;
+    z-index:30;
+	
+}
+
+/*==============================================================================================================================================
+			12.Custom
+================================================================================================================================================*/
+
+#logo
+{
+	position: relative;
+	width: 100%;
+}
+#block-search-form #edit-submit
+{
+	background-image:url("../images/search-icon.png");
+	border-radius: 0px;
+	height: 34px;
+	width: 34px;
+	position: relative;
+	left: -45px;
+	border: none;
+	border-left: 1px solid black;
+	background-size: 33px;
+	margin-top: .5em;
+}
+
+#edit-search-block-form--2{
+	height: 38px;
+	width: 85%;
+	margin-top: .5em;
+}
+
+#region-footer-first
+{
+	padding-bottom: 30px;
+}
+
+.user-region-content a{
+    padding: 0px 70px;
+    padding-left: 0px;
+}
+
+#region-inner region-user-second-inner
+{
+padding-bottom: 20px;
+}
+
+.nivo-controlNav{
+    position:relative;
+    top:-100px;
+    left:470px;
+    z-index:30;
+}
+.theme-default .nivo-controlNav a{
+    background:url("../images/button.png");
+    background-position: 0px 0px;
+    border-radius:15px;
+    width: 16px;
+    height: 19px;
+}
+.theme-default .nivo-controlNav a.active {
+    background:url("../images/buttonactive.png");
+}
+.theme-default .nivo-controlNav a:hover{
+	background:url("../images/Rollover.png");
+
+}
+#block-views-news-block
+{
+	border:1px solid black;
+
+}
+#block-views-news-block
+{
+	position: relative;
+	width: 24%;
+}
+#front-page-content .block{
+    display:inline-block;
+}
+
+#block-block-5 /* Qualifying Courses Block */
+{
+	position:relative;
+	border:1px solid black;
+	width: 24%;
+	margin-right: 1em;
+}
+#block-block-6 /*Learning Events Block */
+{
+	position:relative;
+	border:1px solid black;
+	width: 24%;
+	margin-right: 1em;
+}
+#block-block-7 /* Professional Training Block */
+{
+	position:relative;
+	border:1px solid black;
+	width: 24%;
+	margin-right: 1em;
+} 
+
+#search-block-form
+{
+	display: inline-block;
+	position: relative;
+	float:right;
+	width: 100%;
+}
+
+
+#block-views-news-block, #block-block-5, #block-block-7, #block-block-6{
+    display:inline-block;
+    
+}
+#block-views-news-block, #block-block-5, #block-block-7, #block-block-6{
+    vertical-align: top;
+
+}
+
+.testimonial-content
+{
+	position:relative;
+	left: 0px;
+	width: 74.5%;
+	margin-top: -20.2em;
+	border: solid 1px black;
+}
+.testimonial-left
+{
+	width:25%;
+	border-right:solid 1px black;
+}
+.testimonial-right
+{
+	position: relative;
+	margin-left: 19em;
+	margin-top: -24.9em;
+	width:49.5%;
+}
+
+
+.testimonial-quote
+{
+	position: relative;
+	width: 85%;
+	top: -2.8em;
+}
+.content-right-img
+{
+	position: relative;
+	margin-left: 100%;
+	bottom: -7em;
+}
+
+.testimonial-author{
+position: relative;
+top: -5em;
+right: -21em;
+}
+
+
+
+/*===============================================================================
+		Vertical Sidebar Menu
+================================================================================*/
+
+#block-menu-block-3 {
+  font: 18px/1.5 Helvetica, Arial, sans-serif;
+}
+
+a:link, a:visited {
+  color: #0062A0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #202124;
+  text-decoration: none;
+}
+About
+a:active {
+  color: #202124;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-block-3 .primary-links>a{
+display: block;
+text-decoration: none;
+color: #ffffff;
+opacity:0.5;
+filter:alpha(opacity=50); /* For IE8 and earlier */
+background:#13587D;
+margin-bottom: 5px;
+width: 14.5em;
+ -moz-border-radius: 6px;    /* Firefox */
+ -webkit-border-radius: 6px; /* Chrome & Safari */
+ -khtml-border-radius: 6px;  /* Linux browsers */
+ border-radius: 6px;         /* CSS3 */
+padding: .35em;
+}
+ul li.expanded, ul li.leaf{
+list-style: none;
+list-style-image: none;
+
+}
+
+#block-menu-block-3
+{
+display:inline-block;
+}
+
+#zone-content
+{
+	
+    border: 1px solid rgb(0, 0, 0);
+    width: 77%;
+    border-radius: 15px;
+
+}
+
+#zone-footer-wrapper
+{
+	background-color: #122f4e;
+}
